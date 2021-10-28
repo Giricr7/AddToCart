@@ -17,9 +17,9 @@ class Items extends Component{
         const products = [
             { sale_tag: false, name: 'Fancy Product', rating: 0, price: { old: '', new: '$40.00 - $80.00' }, button: 'View Options' },
             { sale_tag: true, name: 'Special Item', rating: 5, price: { old: '$20.00', new: '$18.00' }, button: 'Add to Cart' },
-            { sale_tag: true, name: 'Sale Item', rating: 0, price: { old: '$50.00', new: '$25.00' }, button: 'Add to Cart' },
-            { sale_tag: false, name: 'Popular Item', rating: 5, price: { old: '', new: '$40.00' }, button: 'Add to Cart' },
-            { sale_tag: true, name: 'Sale Item', rating: 0, price: { old: '$50.00', new: '$25.00' }, button: 'Add to Cart' },
+            { sale_tag: true, name: 'Sale Item', rating: 2, price: { old: '$50.00', new: '$25.00' }, button: 'Add to Cart' },
+            { sale_tag: false, name: 'Popular Item', rating: 4, price: { old: '', new: '$40.00' }, button: 'Add to Cart' },
+            { sale_tag: true, name: 'Sale Item', rating: 3, price: { old: '$50.00', new: '$25.00' }, button: 'Add to Cart' },
             { sale_tag: false, name: 'Fancy Product', rating: 0, price: { old: '', new: '$120.00 - $280.00' }, button: 'Add to Cart' },
             { sale_tag: true, name: 'Special Item', rating: 5, price: { old: '$20.00', new: '$18.00' }, button: 'Add to Cart' },
             { sale_tag: false, name: 'Popular Item', rating: 5, price: { old: '', new: '$40.00' }, button: 'Add to Cart' }
@@ -38,9 +38,9 @@ class Items extends Component{
              
                             {
     
-                                products.map(function (prod,i)
+                                products.map(function (prod_details,i)
                                 {
-                                    return <Products {...prod} key={i + 1} cart_item={this.props.cart_item}/>
+                                    return <Products {...prod_details} key={i + 1} cart_item={this.props.cart_item}/>
                                 },this
                                 )
                            
