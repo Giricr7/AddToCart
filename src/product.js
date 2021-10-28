@@ -24,7 +24,7 @@ class Products extends Component{
         this.setState({ btn_name: "Remove from Cart", btn_color: 'red' })
         this.props.cart_item(1)
         this.state.click=false
-    } else {
+    } else if(this.state.btn_name!=='View Options') {
         this.setState({ btn_name: this.props.button, btn_color: 'green' })
         this.props.cart_item(-1)
         this.state.click=true
