@@ -37,9 +37,9 @@ class Items extends Component{
                         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
              
                             {
-    
+                                /* rendering all products */
                                 products.map(function (prod_details,i)
-                                {
+                                { 
                                     return <Products {...prod_details} key={i + 1} cart_item={this.props.cart_item}/>
                                 },this
                                 )
